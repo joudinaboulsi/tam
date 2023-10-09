@@ -1,0 +1,47 @@
+@extends('layouts.admin')
+@section('content')
+<div class="container-xxl flex-grow-1 container-p-y">
+    
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Create</h5>
+                <div class="card-body">
+                  <form action="{{ route('projectStore') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+               
+                    <div class="pt-4">
+                        <label for="image_poject" class="form-label pb-3">Image</label>
+                        <input type="file" class="form-control" id="image_poject" name="image" />
+                    
+                    </div>
+                    <div class="pt-4">
+                        <label for="image_poject_alt" class="form-label pb-3">Alt Image </label>
+                        <input type="text" class="form-control" id="image_poject_alt" name="alt_image" />
+                    
+                    </div>
+              
+                    <div class="pt-4">
+                        <label for="video_project" class="form-label pb-3">Video</label>
+                        <input type="file" class="form-control" id="video_project" name="video" />
+                    
+                    </div>
+
+
+                <div class="demo-inline-spacing">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@endsection
+
+
+
+
